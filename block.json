@@ -1,0 +1,13 @@
+{
+	"apiVersion": 2,
+	"name": "goodmotion/block-menu",
+	"title": "GM Block Menu",
+	"category": "goodmotion-blocks",
+	"icon": "columns",
+	"description": "Block for display menu",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "gm-block-menu",
+	"editorScript": "file:./build/index.js"
+}

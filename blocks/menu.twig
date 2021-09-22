@@ -1,0 +1,13 @@
+<div class="gm-menus bg-{{ background_color }} text-{{ text_color }}">
+	{%if title_list_menus != '' %}
+	<h2 class="gm-menus-title">{{ title_list_menus }}</h2>
+	{% endif %}
+	<div class="gm-menus-list">
+		{% for menu in posts %}
+		<div class="gm-menus-list-element">
+			<h3 class="gm-menus-list-element-title">{{ menu.title }}</h3>
+			<div>{{ menu.content }}</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
