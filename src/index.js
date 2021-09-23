@@ -26,6 +26,10 @@ registerBlockType("goodmotion/block-menu", {
 		backgroundColor: {
 			type: "string",
 		},
+		isAdmin: {
+			type: "boolean",
+			default: false,
+		},
 	},
 	edit: withColors({ textColor: "color", backgroundColor: "background-color" })(
 		withSelect((select) => {
@@ -41,21 +45,11 @@ registerBlockType("goodmotion/block-menu", {
 			const { textColor, backgroundColor } = props;
 			const blockProps = useBlockProps();
 			return (
-				<div
-					{...useBlockProps({
-						className: `${
-							textColor && textColor.class ? textColor.class : null
-						} ${
-							backgroundColor && backgroundColor.class
-								? backgroundColor.class
-								: null
-						}`,
-					})}
-				>
+				<div {...useBlockProps()}>
 					<Panel props={props} />
 					<ServerSideRender
 						block="goodmotion/block-menu"
-						attributes={props.attributes}
+						attributes={{ ...props.attributes, isAdmin: true }}
 					/>
 				</div>
 			);

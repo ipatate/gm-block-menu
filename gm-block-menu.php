@@ -40,6 +40,10 @@ function block_init()
 			'backgroundColor' => [
 				'type' => "string",
 			],
+			'isAdmin' => [
+				'type' => "boolean",
+				'default' => false
+			]
 		]
 	]);
 }
@@ -77,6 +81,7 @@ function render_callback($attributes, $content)
 	$context['text_color'] = $attributes['textColor'] ?? '';
 	$context['background_color'] = $attributes['backgroundColor'] ?? '';
 	$context['posts'] = $recent_posts;
+	$context['isAdmin'] = $attributes['isAdmin'] ?? false;
 
 	// render template
 	return \Timber::compile('blocks/menu.twig', $context);

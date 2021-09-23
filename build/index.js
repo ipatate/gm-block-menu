@@ -262,6 +262,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     backgroundColor: {
       type: "string"
+    },
+    isAdmin: {
+      type: "boolean",
+      default: false
     }
   },
   edit: (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.withColors)({
@@ -280,13 +284,13 @@ __webpack_require__.r(__webpack_exports__);
       backgroundColor
     } = props;
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.useBlockProps)();
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.useBlockProps)({
-      className: `${textColor && textColor.class ? textColor.class : null} ${backgroundColor && backgroundColor.class ? backgroundColor.class : null}`
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Panel__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Panel__WEBPACK_IMPORTED_MODULE_6__["default"], {
       props: props
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3___default()), {
       block: "goodmotion/block-menu",
-      attributes: props.attributes
+      attributes: { ...props.attributes,
+        isAdmin: true
+      }
     }));
   })) // save
 
