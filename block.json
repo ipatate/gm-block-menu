@@ -1,13 +1,13 @@
 {
 	"apiVersion": 2,
-	"name": "goodmotion/block-menu",
-	"title": "GM Block Menu",
-	"category": "goodmotion-blocks",
+	"name": "goodmotion/block-actu",
+	"title": "GM Block Actu",
+	"category": "energeo-blocks",
 	"icon": "columns",
-	"description": "Block for display menu",
+	"description": "Block for display actu",
 	"supports": {
 		"html": false
 	},
-	"textdomain": "gm-block-menu",
+	"textdomain": "gm-block-actu",
 	"editorScript": "file:./build/index.js"
 }
